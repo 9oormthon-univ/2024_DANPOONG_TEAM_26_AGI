@@ -6,7 +6,7 @@ import {fetchKakaoWebSearch} from "#service/kakao";
 dotenvx.config();
 
 (async () => {
-    const { default: app } = await import("./server");
+    const { default: app } = await import("./server.js");
     const mongoose = await import("mongoose");
 
     await mongoose.connect(process.env.MONGODB_URI as string);
