@@ -51,7 +51,7 @@ class AssignmentService {
         const lines = assignment.trim().split('\n');
 
         const name = lines[0].replaceAll('#', '');
-        const description = lines[1];
+        const description = lines[1] === '' ? lines[2] : lines[1];
         const readme = lines.slice(2).join('\n').trim();
 
         return {
